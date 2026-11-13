@@ -1,0 +1,33 @@
+{
+  "name": "naver-agent-cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Naver Search API CLI for AI agents",
+  "bin": {
+    "naver": "./dist/cli.js"
+  },
+  "scripts": {
+    "dev": "bun run src/cli.ts",
+    "build": "bun build src/cli.ts --target=bun --outdir=dist",
+    "test": "bun test",
+    "check": "tsc --noEmit && oxlint --deny-warnings src test",
+    "format": "oxfmt src test",
+    "format:check": "oxfmt --check src test"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.9.0",
+    "commander": "^14.0.3",
+    "dotenv": "^17.2.3",
+    "he": "^1.2.0",
+    "ky": "^1.14.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.0",
+    "@types/he": "^1.2.3",
+    "oxfmt": "^0.74.0",
+    "oxlint": "^1.89.0",
+    "typescript": "^5.9.3"
+  }
+}
